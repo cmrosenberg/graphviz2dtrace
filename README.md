@@ -1,8 +1,8 @@
 # graphviz2dtrace
 
-graphviz2dtrace creates monitoring scripts in the DTrace D
-scripting language from automata specifications written in
-graphviz dot notation. It is best thought of as a backend to
+graphviz2dtrace creates monitoring scripts in the DTrace [D
+scripting language](http://dtrace.org/guide/chp-prog.html) from automata specifications written in
+[Graphviz](http://graphviz.org/) dot notation. It is best thought of as a backend to
 [LamaConv](https://www.isp.uni-luebeck.de/lamaconv).
 
 The fundamental idea is to give users a way of associating atomic
@@ -12,13 +12,15 @@ embedded in the script updates its state. As soon as either a good
 or bad prefix is detected, the monitor reports the verdict and stops
 monitoring.
 
-Currently, graphviz2dtrace only works with monitor automata adhering to LTL3
-semantics.
+Currently, graphviz2dtrace only works with monitor automata adhering to [LTL3
+semantics](http://link.springer.com/chapter/10.1007%2F11944836_25).
 
 graphviz2dtrace was developed as part of my MsC in Informatics at
 the University of Oslo in 2016: "Leveraging DTrace for Runtime Verification" (forthcoming).
 
 ## Usage
+
+(Screencast forthcoming)
 
 Runtime verification with graphviz2dtrace proceeds in three steps:
 
@@ -119,7 +121,7 @@ PUSH 2
 
 The most straightforward way of attaching our monitor to the running
 stack program is to use our monitor to start the program with DTrace's
-`-c` flag. We feed the input testcase `incite_error.txt` to the program and get
+`-c` flag. We feed the input test case `incite_error.txt` to the program and get
 the following interaction:
 
 ```sh
