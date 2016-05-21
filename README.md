@@ -55,7 +55,7 @@ rltlconv "LTL=[]((push && <>empty) -> (!empty U pop)),ALPHABET=[push,pop,empty]"
 This invocation produces [this dot script](example/automaton.dot), which
 encodes the following automaton:
 
-![](example/automaton.svg)
+![](https://raw.githubusercontent.com/cmrosenberg/graphviz2dtrace/master/example/automaton.png?token=AAmxWQZm3_MNJ9_2k2HVCdMXQ9XnHM-7ks5XSb5MwA%3D%3D)
 
 If the automaton enters the red state `q0`, it has detected a violation of the property.
 
