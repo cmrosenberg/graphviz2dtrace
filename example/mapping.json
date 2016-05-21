@@ -1,0 +1,5 @@
+{
+    "empty": "pid$target::empty:return/arg1 == 1/",
+    "pop": "pid$target::pop:return",
+    "push":"pid$target::push:entry"
+}

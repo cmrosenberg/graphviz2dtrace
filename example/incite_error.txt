@@ -1,0 +1,4 @@
+PUSH 1
+EMPTY
+PUSH 2
+

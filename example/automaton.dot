@@ -1,0 +1,14 @@
+digraph G {
+  q0 -> q0 [label="?"];
+  q1 -> q2 [label="\"pop\""];
+  q1 -> q1 [label="\"push\""];
+  q1 -> q0 [label="\"empty\""];
+  q2 -> q2 [label="\"empty\""];
+  q2 -> q2 [label="\"pop\""];
+  q2 -> q1 [label="\"push\""];
+  start [shape=none, style=invis];
+  start -> q2 [label="START"];
+  q2 [style=filled, fillcolor=yellow]
+  q1 [style=filled, fillcolor=yellow]
+  q0 [style=filled, fillcolor=red]
+}
