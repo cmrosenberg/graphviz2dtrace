@@ -1,16 +1,11 @@
 # graphviz2dtrace
 
-graphviz2dtrace creates monitoring scripts in the DTrace [D
+graphviz2dtrace creates monitoring scripts in the [DTrace](http://dtrace.org/guide/preface.html) [D
 scripting language](http://dtrace.org/guide/chp-prog.html) from automata specifications written in
 [Graphviz](http://graphviz.org/) dot notation. It is best thought of as a backend to
-[LamaConv](https://www.isp.uni-luebeck.de/lamaconv).
-
-The fundamental idea is to give users a way of associating atomic
-propositions in LTL formulas with DTrace probe specifications: Every
-time the corresponding DTrace probe fires, the monitor automaton
-embedded in the script updates its state. As soon as either a good
-or bad prefix is detected, the monitor reports the verdict and stops
-monitoring.
+[LamaConv](https://www.isp.uni-luebeck.de/lamaconv) which lets you associate the atomic
+propositions in your LTL formulas with DTrace probe specifications to create monitoring scripts.
+ This allows you to leverage the thousands of instrumentation points provided by DTrace (including DTrace's dynamic instrumentation facilities, of course) without having to master the D scripting language.
 
 Currently, graphviz2dtrace only works with monitor automata adhering to [LTL3
 semantics](http://link.springer.com/chapter/10.1007%2F11944836_25).
@@ -189,6 +184,6 @@ $ sudo ./monitor.d -p 1575 2
 
 ## Limitations
 
-Scripts produced by graphviz2dtrace are susceptible to race conditions on the
+Scripts produced by graphviz2dtrace are **susceptible to race conditions** on the
 automaton's state variable whenever two probes can fire at the same time and are not
 differentiated by an appropriate predicate expression.
