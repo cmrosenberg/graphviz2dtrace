@@ -13,6 +13,11 @@ semantics](http://link.springer.com/chapter/10.1007%2F11944836_25).
 `graphviz2dtrace` was developed as part of my MsC in Informatics at
 the University of Oslo in 2016: "Leveraging DTrace for Runtime Verification" (forthcoming).
 
+## Installation
+
+`graphviz2dtrace` requires [docopt](https://github.com/docopt/docopt) and [PyGraphviz](https://pygraphviz.github.io/)
+to run.
+
 ## Usage
 
 (Screencast forthcoming)
