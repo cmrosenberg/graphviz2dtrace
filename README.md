@@ -1,23 +1,23 @@
 # graphviz2dtrace
 
-graphviz2dtrace creates monitoring scripts in the [DTrace](http://dtrace.org/guide/preface.html) [D
+`graphviz2dtrace` creates monitoring scripts in the [DTrace](http://dtrace.org/guide/preface.html) [D
 scripting language](http://dtrace.org/guide/chp-prog.html) from automata specifications written in
 [Graphviz](http://graphviz.org/) dot notation. It is best thought of as a backend to
 [LamaConv](https://www.isp.uni-luebeck.de/lamaconv) which lets you associate the atomic
 propositions in your LTL formulas with DTrace probe specifications to create monitoring scripts.
  This allows you to leverage the thousands of instrumentation points provided by DTrace (including DTrace's dynamic instrumentation facilities, of course) without having to master the D scripting language.
 
-Currently, graphviz2dtrace only works with monitor automata adhering to [LTL3
+Currently, `graphviz2dtrace` only works with monitor automata adhering to [LTL3
 semantics](http://link.springer.com/chapter/10.1007%2F11944836_25).
 
-graphviz2dtrace was developed as part of my MsC in Informatics at
+`graphviz2dtrace` was developed as part of my MsC in Informatics at
 the University of Oslo in 2016: "Leveraging DTrace for Runtime Verification" (forthcoming).
 
 ## Usage
 
 (Screencast forthcoming)
 
-Runtime verification with graphviz2dtrace proceeds in three steps:
+Runtime verification with `graphviz2dtrace` proceeds in three steps:
 
 1. Decide on a verification property, express it in LTL and use
 [LamaConv](https://www.isp.uni-luebeck.de/lamaconv) to produce an LTL3
@@ -27,7 +27,7 @@ monitor.
 DTrace probe specifications (with optional predicate expressions).
 Express this mapping in a JSON file.
 
-3. Feed the automaton and the mapping to graphviz2dtrace to produce
+3. Feed the automaton and the mapping to `graphviz2dtrace` to produce
 the monitoring script.
 
 ### Example
@@ -72,7 +72,7 @@ We encode our mapping in a JSON file as follows:
 }
 ```
 
-We can then feed the automaton and the mapping to graphviz2dtrace to produce a monitoring script:
+We can then feed the automaton and the mapping to `graphviz2dtrace` to produce a monitoring script:
 
 ```sh
 $ graphviz2dtrace -m mapping.json automaton.dot
@@ -165,7 +165,7 @@ $ sudo ./monitor.d -p 1575
 
 Suppose we knew that the stack program was running with PID 1575 and that a *push* had already occurred.
 We could then attach the monitor and set the automaton in the state corresponding to `q1` shown in the automaton above.
-All graphviz2dtrace-generated scripts come with a comment showing which internal numeric code each
+All `graphviz2dtrace`-generated scripts come with a comment showing which internal numeric code each
 state has been given. For the stack monitor discussed above, the mapping looks like this:
 
 ```c
@@ -184,6 +184,6 @@ $ sudo ./monitor.d -p 1575 2
 
 ## Limitations
 
-Scripts produced by graphviz2dtrace are **susceptible to race conditions** on the
+Scripts produced by `graphviz2dtrace` are **susceptible to race conditions** on the
 automaton's state variable whenever two probes can fire at the same time and are not
 differentiated by an appropriate predicate expression.
