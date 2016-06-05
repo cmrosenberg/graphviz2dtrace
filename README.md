@@ -20,9 +20,7 @@ to run.
 
 ## Usage
 
-<iframe src="https://player.vimeo.com/video/169470067" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/169470067">graphviz2dtrace demo: The Stack</a> from <a href="https://vimeo.com/user8144656">Carl Martin Rosenberg</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
+A [demonstration screencast](https://vimeo.com/169470067) is available on Vimeo
 Runtime verification with `graphviz2dtrace` proceeds in three steps:
 
 1. Decide on a verification property, express it in LTL and use
