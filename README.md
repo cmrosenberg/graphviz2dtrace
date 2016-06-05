@@ -20,7 +20,8 @@ to run.
 
 ## Usage
 
-(Screencast forthcoming)
+<iframe src="https://player.vimeo.com/video/169470067" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/169470067">graphviz2dtrace demo: The Stack</a> from <a href="https://vimeo.com/user8144656">Carl Martin Rosenberg</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 Runtime verification with `graphviz2dtrace` proceeds in three steps:
 
