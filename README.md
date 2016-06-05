@@ -20,7 +20,8 @@ to run.
 
 ## Usage
 
-A [demonstration screencast](https://vimeo.com/169470067) is available on Vimeo
+A [demonstration screencast](https://vimeo.com/169470067) is available on Vimeo.
+
 Runtime verification with `graphviz2dtrace` proceeds in three steps:
 
 1. Decide on a verification property, express it in LTL and use
